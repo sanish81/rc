@@ -70,10 +70,10 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker fzf ssh-agent)
+plugins=(git docker fzf ssh-agent vi-mode thefuck magic-enter git-prompt gitignore)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-export FZF_BASE=/opt/homebrew/bin
+export FZF_BASE=$HOME/.fzf
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -106,3 +106,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
