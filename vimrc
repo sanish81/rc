@@ -41,14 +41,13 @@ nnoremap <leader>s :so ~/.vimrc<CR>
 nnoremap Q <nop>
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
-nnoremap <Left>> :vertical resize +2<CR>
-nnoremap <Right>> :vertical resize -2<CR>
+nnoremap <Left> :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>n :set invnu invrnu<CR>
 nnoremap <leader>l :set foldmethod=syntax<CR>
 nnoremap <leader><C-l> :set nofoldenable<CR>
 nnoremap <leader><Space> :CtrlP<CR>
-nmap <Leader>l :Limelight!<CR>
 
 " Color options
 "let g:lightline = {
@@ -66,21 +65,7 @@ nnoremap <F8> :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen = 1
 
 " Status line
-" set laststatus=2
-" set statusline=
-"" show file type
-" set statusline+=\ %y
-"" show file path
-" set statusline+=%#GruvboxBlueSign#
-" set statusline+=\ %f
-"" got right
-" set statusline+=%=
-"" show column
-" set statusline+=%#GruvboxYellowSign#
-" set statusline+=\ [%c]
-"" show line numbers
-" set statusline+=%#GruvboxRedSign#
-" set statusline+=\ %l/%L
+set laststatus=2
 
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
