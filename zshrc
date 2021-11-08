@@ -1,3 +1,5 @@
+source $HOME/.config/zsh/.zprofile
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -70,7 +72,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker fzf ssh-agent vi-mode thefuck magic-enter git-prompt gitignore)
+plugins=(git docker fzf ssh-agent vi-mode thefuck magic-enter git-prompt gitignore zsh-autosuggestions pj dirhistory zsh-interactive-cd osx)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 export FZF_BASE=$HOME/.fzf
@@ -102,9 +104,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias tsm='transmission-remote'
+alias vzrc='$EDITOR $ZDOTDIR/.zshrc'
+alias vrc='$EDITOR $HOME/.vimrc'
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+#export MANPAGER='col -b | vim -MR - '
+export EDITOR='vim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(starship init zsh)"
+
+# pj plugin
+PROJECT_PATHS=(~/gits)
+
+source /Users/sanish/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
