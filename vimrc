@@ -4,7 +4,7 @@ set encoding=utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'kien/ctrlp.vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'kien/ctrlp.vim'
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -18,6 +18,8 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'yegappan/taglist'
 Plug 'mileszs/ack.vim'
+Plug 'AndrewRadev/typewriter.vim'
+"Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -39,10 +41,10 @@ set wildmode=longest,list,full
 " Key bindings
 nnoremap <leader>s :so ~/.vimrc<CR>
 nnoremap Q <nop>
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+"nnoremap <Up> :resize +2<CR>
+"nnoremap <Down> :resize -2<CR>
+"nnoremap <Left> :vertical resize +2<CR>
+"nnoremap <Right> :vertical resize -2<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>n :set invnu invrnu<CR>
 nnoremap <leader>l :set foldmethod=syntax<CR>
@@ -81,3 +83,6 @@ au FileType c,cpp,objc,objcpp call rainbow#load()
 
 " Dont show commands with lightline
 set noshowmode
+
+" Case insensitive search by default
+set ic
